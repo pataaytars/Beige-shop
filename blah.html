@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beige Shop - Elegant Stationery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Swiper CSS for Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="hy.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">The Beige Shop</div>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#" class="cart-icon" onclick="openCart()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Beige Shop</h1>
+            <p>Bringing the Rang of Pakistan to your desk. Curated collection for your creative journey</p>
+            <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <div class="description-section">
+        <p>At The Beige Shop, we celebrate culture through unique, hand-illustrated stationery, inspired by Pakistani heritage. <br>
+            We focus on quality over quantity, bringing you original designs you won’t find anywhere else.</p>
+    </div>
+
+    <!-- Products Collection -->
+    <div class="products-wrapper" id="products">
+        <div class="wave-element wave-top">
+            <svg viewBox="0 0 2400 60" preserveAspectRatio="none"><path d="M 0,35 Q 150,10 300,35 T 600,35 T 900,35 T 1200,35 T 1500,35 T 1800,35 T 2100,35 T 2400,35 L 2400,0 L 0,0 Z"></path></svg>
+        </div>
+
+        <section class="content-area">
+            <h2 class="section-title"> Our Collection</h2>
+            <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+                    <!-- Item 1 -->
+                    <div class="product-card group relative cursor-pointer" data-id="1">
+                        <div class="blob-container blob-1">
+                            <img class="img-main" src="stickers.jpeg" alt="Sticker Pack">
+                            <img class="img-hover" src="sticker2.jpg" alt="Sticker Pack Alt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">Sticker Pack</div>
+                            <div class="product-price">Rs.250 </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="product-card group relative cursor-pointer" data-id="2">
+                        <div class="blob-container blob-2">
+                            <img class="img-main" src="notepad.jpeg" alt="Notepads">
+                            <img class="img-hover" src="notepad2.jpeg" alt="Notepads Alt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">Notepads</div>
+                            <div class="product-price">Rs.350 </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="product-card group relative cursor-pointer" data-id="3">
+                        <span class="sold-out-badge">Sold out</span>
+                        <div class="blob-container blob-3">
+                            <img class="img-main" src="planner.jpeg" alt="Study Planner">
+                            <img class="img-hover" src="planner2.jpeg" alt="Study Planner Alt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">Study Planner</div>
+                            <div class="product-price">Rs.600 </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="product-card group relative cursor-pointer" data-id="4">
+                        <div class="blob-container blob-4">
+                            <img class="img-main" src="poster.jpeg" alt="Poster">
+                            <img class="img-hover" src="https://theduskstore.com/cdn/shop/files/IMG_3972.jpg?v=1697475199&width=800" alt="Poster Alt">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-title">Aesthetic Poster</div>
+                            <div class="product-price">Rs.100 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wave-element wave-bottom">
+            <svg viewBox="0 0 2400 60" preserveAspectRatio="none"><path d="M 0,25 Q 150,50 300,25 T 600,25 T 900,25 T 1200,25 T 1500,25 T 1800,25 T 2100,25 T 2400,25 L 2400,60 L 0,60 Z"></path></svg>
+        </div>
+    </div>
+
+    <!-- Customer Reviews Slider Section -->
+    <section class="reviews-section">
+        <div class="max-w-[1200px] mx-auto px-6">
+            <div class="swiper reviewsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="reviewer-header">
+                                <div class="reviewer-avatar">FU</div>
+                                <div class="reviewer-meta">
+                                    <div class="reviewer-name">Fatima Ubaid ur Rehman</div>
+                                    <div class="reviewer-title">Cyber Security</div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text-short">Honestly, the Rasekh course turned out to be such a game-changer for me! It really helped me a lot and made things way easier...</p>
+                                <p class="review-text-full hidden">Honestly, the Rasekh course turned out to be such a game-changer for me! It really helped me a lot and made things way easier to understand in the start of my learning journey. The practical approach was amazing!</p>
+                            </div>
+                            <button class="see-more" onclick="toggleReview(this)">See More</button>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="reviewer-header">
+                                <div class="reviewer-avatar">LK</div>
+                                <div class="reviewer-meta">
+                                    <div class="reviewer-name">Laraib Khushnood</div>
+                                    <div class="reviewer-title">Web Development</div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text-short">This course is a great starting point for anyone interested in web development. It covers all the basics you need before...</p>
+                                <p class="review-text-full hidden">This course is a great starting point for anyone interested in web development. It covers all the basics you need before starting to build your own projects. Once you understand the fundamentals, everything clicks!</p>
+                            </div>
+                            <button class="see-more" onclick="toggleReview(this)">See More</button>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="reviewer-header">
+                                <div class="reviewer-avatar">KK</div>
+                                <div class="reviewer-meta">
+                                    <div class="reviewer-name">Khansa Khan</div>
+                                    <div class="reviewer-title">Programming</div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text-short">Being a bio student, I always found computer-related stuff a bit of a mystery. I had heard so much about coding and Python...</p>
+                                <p class="review-text-full hidden">Being a bio student, I always found computer-related stuff a bit of a mystery. I had heard so much about coding and Python but never actually tried it myself until this course made it so simple and accessible.</p>
+                            </div>
+                            <button class="see-more" onclick="toggleReview(this)">See More</button>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="reviewer-header">
+                                <div class="reviewer-avatar">AA</div>
+                                <div class="reviewer-meta">
+                                    <div class="reviewer-name">Ahmed Ali</div>
+                                    <div class="reviewer-title">Graphic Design</div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text-short">The attention to detail in these stationery sets is incredible. As a designer, I really appreciate the minimalist beige aesthetic...</p>
+                                <p class="review-text-full hidden">The attention to detail in these stationery sets is incredible. As a designer, I really appreciate the minimalist beige aesthetic. It makes my workspace look professional and inspiring every single day.</p>
+                            </div>
+                            <button class="see-more" onclick="toggleReview(this)">See More</button>
+                        </div>
+                    </div>
+                    <!-- Review 5 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="reviewer-header">
+                                <div class="reviewer-avatar">SN</div>
+                                <div class="reviewer-meta">
+                                    <div class="reviewer-name">Sarah Noor</div>
+                                    <div class="reviewer-title">Verified Buyer</div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p class="review-text-short">I ordered the sticker pack and the notepad. The paper quality is premium and the colors are exactly as shown in the pictures...</p>
+                                <p class="review-text-full hidden">I ordered the sticker pack and the notepad. The paper quality is premium and the colors are exactly as shown in the pictures. Delivery was fast and the packaging was lovely!</p>
+                            </div>
+                            <button class="see-more" onclick="toggleReview(this)">See More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Progress Line Slider -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>The Beige Shop</h3>
+                <p>Your destination for elegant stationery products</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📞 +92-300-1234567</p>
+                <p>✉ info@thebeigeshop.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>📷 @thebeigeshop</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 The Beige Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Square Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <img id="modalMainImage" src="" alt="">
+                    <div class="modal-thumbnails" id="modalThumbnails"></div>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price-section">
+                        <span class="modal-price" id="modalPrice"></span>
+                    </div>
+                    <div class="quantity-section">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" onclick="decreaseQuantity()">−</button>
+                            <input type="number" id="quantityInput" value="1" readonly>
+                            <button class="qty-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <button class="btn-add-to-cart" onclick="addToCartFromModal()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="fix.js"></script>
+</body>
+</html>
