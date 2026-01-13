@@ -427,7 +427,7 @@ nav a:hover {
 }
 
 /* Sold Out Label */
-.sold-out-badge {
+/* .sold-out-badge {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -441,7 +441,7 @@ nav a:hover {
     letter-spacing: 2px;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-}
+} */
 
 /* ==========================================
    REVIEWS SECTION
